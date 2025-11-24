@@ -1,2 +1,2 @@
 # week-02
-Week 2 or techEducators
+Week 2 of techEducators
