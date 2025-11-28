@@ -1,0 +1,34 @@
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.full-screen-container{
+    background-color: black;
+}
+
+#thumbnail-container{
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    /* scroll-snap-type: x mandatory; */
+    /* overscroll-behavior-x: contain; */
+    overflow: auto;
+    white-space: nowrap;
+    width: 200px;
+    height: 100px;
+    margin-left: -100px;
+    border: 2px solid red;
+}
+
+.image-thumbnail{
+    height: 100px;
+    width: 100px;
+}
+
+.image-fullscreen{
+    width: 100vw;
+    height: 100vh;
+    object-fit: contain;
+}
