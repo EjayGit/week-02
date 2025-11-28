@@ -19,7 +19,7 @@
     min-width: 200px; /* min-width due to minimum screen size designed for (iPhone SE) */
     height: 10%;
     aspect-ratio: 2;
-    margin-left: -25%;
+    margin-left: -100px;
     border: 2px solid red;
 }
 
@@ -32,4 +32,10 @@
     width: 100vw;
     height: 100vh;
     object-fit: contain;
+}
+
+@media(max-width: 800px){
+    #thumbnail-container{
+        left: 150px;
+    }
 }
