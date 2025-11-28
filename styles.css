@@ -34,6 +34,14 @@
     object-fit: contain;
 }
 
+#leftBtn{
+    
+}
+
+#rightBtn{
+
+}
+
 @media(max-width: 800px){
     #thumbnail-container{
         left: 150px;
