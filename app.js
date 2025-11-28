@@ -57,7 +57,7 @@ function createFullScreenImages(i){
     console.log('breakpoint1');
     console.log(fullScreenContainer);
     // delete the current  fullscreen image
-    fullScreenContainer.innerHTML = null; // BUG***********************************
+    fullScreenContainer.innerHTML = null;
     console.log('breakpoint2');
     // create image
     const fullScreenImage = document.createElement('img');
@@ -72,4 +72,5 @@ function createFullScreenImages(i){
     fullScreenContainer.appendChild(fullScreenImage);
 }
 
+createFullScreenImages(0);
 createThumbnails(imageData);
