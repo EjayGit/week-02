@@ -64,6 +64,7 @@ function createFullScreenImages(i){
     fullScreenImage.setAttribute('class', 'image-fullscreen');
     // append the image to the container
     fullScreenContainer.appendChild(fullScreenImage);
+    j = i; // Ensure when you click that the indicies match
 }
 
 function leftButton(){
@@ -86,10 +87,12 @@ function rightButton(){
     createFullScreenImages(j)
 }
 
+
+let j = 0;
+
 createFullScreenImages(0);
 createThumbnails(imageData);
 
-let j = 0;
 const leftBtn = document.getElementById('leftBtn');
 const rightBtn = document.getElementById('rightBtn');
 
