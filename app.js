@@ -66,15 +66,7 @@ function createFullScreenImages(i){
     fullScreenContainer.appendChild(fullScreenImage);
 }
 
-createFullScreenImages(0);
-createThumbnails(imageData);
-
-let j = 0;
-const leftBtn = document.getElementById('leftBtn');
-const rightBtn = document.getElementById('rightBtn');
-// if leftBtn, decrease value of j
-leftBtn.addEventListener('click', () => {
-    console.log(`leftBtn clicked ${j}`);
+function leftButton(){
     j = j - 1;
     // if <0, j = 0
     if (j < 0){
@@ -82,11 +74,9 @@ leftBtn.addEventListener('click', () => {
     };
     // call createFullScreenImage(j)
     createFullScreenImages(j)
-})
+}
 
-// if rightBtn, increase value of j
-rightBtn.addEventListener('click', () => {
-    console.log(`rightBtn clicked ${j}`);
+function rightButton(){
     j = j + 1;
     // if j = imagData.length, j = imageData.length - 1
     if (j == imageData.length){
@@ -94,5 +84,30 @@ rightBtn.addEventListener('click', () => {
     };
     // call createFullScreenImage(j)
     createFullScreenImages(j)
+}
+
+createFullScreenImages(0);
+createThumbnails(imageData);
+
+let j = 0;
+const leftBtn = document.getElementById('leftBtn');
+const rightBtn = document.getElementById('rightBtn');
+
+// if leftBtn, decrease value of j
+leftBtn.addEventListener('click', () => {
+    leftButton();
 })
 
+// if rightBtn, increase value of j
+rightBtn.addEventListener('click', () => {
+    rightButton();   
+})
+
+document.addEventListener('keydown', (e) => {
+    console.log(e);
+    if (e.key == 'ArrowLeft'){
+        leftButton();
+    } else if(e.key == 'ArrowRight'){
+        rightButton();
+    }
+});

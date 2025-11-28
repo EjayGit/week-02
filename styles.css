@@ -17,10 +17,12 @@
     overflow: auto;  /* hint from w3schools */
     white-space: nowrap; /* hint from w3schools */
     min-width: 200px; /* min-width due to minimum screen size designed for (iPhone SE) */
+    max-width: 300px;
     height: 10%;
     aspect-ratio: 2;
     margin-left: -100px;
-    border: 2px solid red;
+    border: 1px solid rgb(255, 255, 255);
+    gap:10px;
 }
 
 .image-thumbnail{
@@ -60,5 +62,12 @@
 @media(max-width: 800px){
     #thumbnail-container{
         left: 150px;
+        max-width: 200px;
+    }
+    #leftBtn{
+        left: 125px;
+    }
+    #rightBtn{
+        left: 165px;
     }
 }
