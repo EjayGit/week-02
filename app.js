@@ -40,40 +40,59 @@ function createThumbnails(imageData){
         // add an eventListener to each image -> the event handler of this event is the function
         // you write to create the fullscreen images
         imageElement.addEventListener('click', () => {
-            console.log(`image clicked, ${i}`);
             createFullScreenImages(i);
         })
         // append the created images to the thumbnail-container
         const thumbnailContainer = document.getElementById('thumbnail-container');
         thumbnailContainer.appendChild(imageElement);
-        console.log(i);
-        console.log(imageElement);
     };
 }
 
 // Step 3: Create fullscreen images
 function createFullScreenImages(i){
-    console.log(i);
     // this the event handler
     // select the fullscreen-container
     const fullScreenContainer = document.getElementById('full-screen-container');
-    console.log('breakpoint1');
-    console.log(fullScreenContainer);
     // delete the current  fullscreen image
     fullScreenContainer.innerHTML = null;
-    console.log('breakpoint2');
     // create image
     const fullScreenImage = document.createElement('img');
-    console.log(fullScreenImage);
     // update its values (properties)
     fullScreenImage.setAttribute('src', imageData[i].imageSrc);
     fullScreenImage.setAttribute('alt', imageData[i].imageAlt);
     // add className for styling (making the image fullscreen)
     fullScreenImage.setAttribute('class', 'image-fullscreen');
-    console.log(fullScreenImage);
     // append the image to the container
     fullScreenContainer.appendChild(fullScreenImage);
 }
 
 createFullScreenImages(0);
 createThumbnails(imageData);
+
+let j = 0;
+const leftBtn = document.getElementById('leftBtn');
+const rightBtn = document.getElementById('rightBtn');
+// if leftBtn, decrease value of j
+leftBtn.addEventListener('click', () => {
+    console.log(`leftBtn clicked ${j}`);
+    j = j - 1;
+    // if <0, j = 0
+    if (j < 0){
+        j = 0;
+    };
+    // call createFullScreenImage(j)
+    createFullScreenImages(j)
+})
+
+// if rightBtn, increase value of j
+rightBtn.addEventListener('click', () => {
+    console.log(`rightBtn clicked ${j}`);
+    j = j + 1;
+    // if j = imagData.length, j = imageData.length - 1
+    if (j == imageData.length){
+        j = imageData.length - 1;
+    };
+    // call createFullScreenImage(j)
+    createFullScreenImages(j)
+})
+
