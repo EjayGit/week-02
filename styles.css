@@ -10,7 +10,7 @@
 
 #thumbnail-container{
     position: absolute;
-    top: 50px;
+    top: 75px;
     left: 50%;
     /* scroll-snap-type: x mandatory; */
     /* overscroll-behavior-x: contain; */
@@ -35,11 +35,26 @@
 }
 
 #leftBtn{
-    
+    position: absolute;
+    top: 25px;
+    left: 45%;
+    padding: 10px;
+    height: 45px;
+    width: 35px;
+    margin-left: -35px;
+    border-radius: 50%;
+    background-color: aquamarine;
 }
 
 #rightBtn{
-
+    position: absolute;
+    top: 25px;
+    left: 55%;
+    padding: 10px;
+    height: 45px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: aquamarine;
 }
 
 @media(max-width: 800px){
