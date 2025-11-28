@@ -1,7 +1,5 @@
 // TODO: Create thumbnail images so the user can click and see them in fullscreen format
 
-// const { createElement } = require("react");
-
 // Step 1: Store image data
 const imageData = [
     {
@@ -18,6 +16,11 @@ const imageData = [
         imageName: "zebraFull.jpg",
         imageSrc: "./images/zebraFull.jpg",
         imageAlt: "image of zebra",
+    },
+    {
+        imageName: "landscapeFull.jpg",
+        imageSrc: "./images/landscapeFull.jpg",
+        imageAlt: "image of landscape",
     }
 ]
 

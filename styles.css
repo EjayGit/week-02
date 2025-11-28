@@ -14,17 +14,18 @@
     left: 50%;
     /* scroll-snap-type: x mandatory; */
     /* overscroll-behavior-x: contain; */
-    overflow: auto;
-    white-space: nowrap;
-    width: 200px;
-    height: 100px;
-    margin-left: -100px;
+    overflow: auto;  /* hint from w3schools */
+    white-space: nowrap; /* hint from w3schools */
+    min-width: 200px; /* min-width due to minimum screen size designed for (iPhone SE) */
+    height: 10%;
+    aspect-ratio: 2;
+    margin-left: -25%;
     border: 2px solid red;
 }
 
 .image-thumbnail{
-    height: 100px;
-    width: 100px;
+    height: 100%;
+    aspect-ratio: 1;
 }
 
 .image-fullscreen{
