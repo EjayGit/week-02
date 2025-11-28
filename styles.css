@@ -60,6 +60,7 @@
     width: 35px;
     border-radius: 50%;
     background-color: whitesmoke;
+}
 
 @media(max-width: 800px){
     #thumbnail-container{
