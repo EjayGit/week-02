@@ -71,7 +71,7 @@ function leftButton(){
     j = j - 1;
     // if <0, j = 0
     if (j < 0){
-        j = 0;
+        j = imageData.length - 1;
     };
     // call createFullScreenImage(j)
     createFullScreenImages(j)
@@ -81,7 +81,7 @@ function rightButton(){
     j = j + 1;
     // if j = imagData.length, j = imageData.length - 1
     if (j == imageData.length){
-        j = imageData.length - 1;
+        j = 0;
     };
     // call createFullScreenImage(j)
     createFullScreenImages(j)
